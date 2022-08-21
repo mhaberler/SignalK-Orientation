@@ -118,12 +118,14 @@ void setup() {
   sensesp_app =
       (&builder)
           // Set a custom hostname for the app.
-          ->set_hostname("eCompass")
+          ->set_hostname(HOST)
           // Optionally, hard-code the WiFi and Signal K server
           // settings.
           // ->set_wifi("mySSID", "myPassword")
           // ->set_sk_server("10.0.0.4", 3000) // my SK server IP address and port
           ->enable_uptime_sensor()
+          ->enable_system_info_sensors()
+          ->enable_ota(OTA_PASSWD)
           ->get_app();
   /**
    * Create the global SensESPApp() object.
