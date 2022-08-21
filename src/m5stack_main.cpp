@@ -28,10 +28,10 @@
 #include <sstream>
 #include <string>
 
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/sensors/analog_input.h"
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/sensors/sensor.h"
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/signalk/signalk_output.h"
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp_app_builder.h"
+#include "sensesp/sensors/analog_input.h"
+#include "sensesp/sensors/sensor.h"
+#include "sensesp/signalk/signalk_output.h"
+#include "sensesp_app_builder.h"
 
 #include "orientation_sensor.h"
 
@@ -39,9 +39,9 @@
  * If using a button-press to save Magnetic Calibration, then include
  * digital_input.h, lambda_consumer.h, and debounce.h
  */
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/sensors/digital_input.h"
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/system/lambda_consumer.h"
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/transforms/debounce.h"
+#include "sensesp/sensors/digital_input.h"
+#include "sensesp/system/lambda_consumer.h"
+#include "sensesp/transforms/debounce.h"
 /**
  * If wanting to correct compass readings for mounting offsets or
  * residual deviations after magnetic calibration, then need either
@@ -49,13 +49,13 @@
  * or a curve interpolator transform (which provides interpolation
  * to a user-supplied set of points).
  */
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/transforms/angle_correction.h"
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/transforms/curveinterpolator.h"
+#include "sensesp/transforms/angle_correction.h"
+#include "sensesp/transforms/curveinterpolator.h"
 /**
  * If using the Temperature report, then include the linear transform
  * for calibrating the temperature readings.
  */
-#include "../.pio/libdeps/esp32dev/SensESP/src/sensesp/transforms/linear.h"
+#include "sensesp/transforms/linear.h"
 
 // Sensor hardware details: I2C addresses and pins
 #define BOARD_ACCEL_MAG_I2C_ADDR                                               \
